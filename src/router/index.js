@@ -6,7 +6,7 @@ import routes from './routes'
 const Router = () => (
   <BrowserRouter>
     {routes.map(route => (
-      <Route {...route} key={route.path} />
+      <Route {...route} key={route.path} exact />
     ))}
   </BrowserRouter>
 )

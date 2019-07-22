@@ -13,8 +13,7 @@ const WeuiBtn = ({
 }) => {
   return (
     <button
-      className={classnames('weui-btn', {
-        [`weui-btn_${type}`]: true,
+      className={classnames('weui-btn', `weui-btn_${type}`, {
         'weui-btn_primary': primary,
         'weui-btn_default': btnDefault,
         'weui-btn_warn': warn
