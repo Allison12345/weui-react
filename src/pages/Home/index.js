@@ -19,7 +19,7 @@ class Home extends Component {
             },
             {
               label: 'Input',
-              path: 'cells'
+              path: 'input'
             },
             {
               label: 'List',

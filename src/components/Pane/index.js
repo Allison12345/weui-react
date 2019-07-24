@@ -22,7 +22,9 @@ const Pane = ({ label, icon, items = [], history }) => {
             <WeuiCell
               {...item}
               key={index}
-              access
+              bd={item.label}
+              ft
+              type="access"
               onClick={() => routerClick(item.path)}
             />
           ))}

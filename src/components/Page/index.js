@@ -15,7 +15,7 @@ const Page = ({ ft, title, desc, spacing, children }) => {
       <div className={classnames('page__bd', { page__bd_spacing: spacing })}>
         {children}
       </div>
-      <div className="page__ft">{ft}</div>
+      {ft && <div className="page__ft">{ft}</div>}
     </div>
   )
 }

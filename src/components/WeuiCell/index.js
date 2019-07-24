@@ -1,17 +1,20 @@
 import React from 'react'
 
 import classnames from 'classnames'
+import { renderProp } from '../../utils/render'
 
-const WeuiCell = ({ label, access, onClick }) => {
+const WeuiCell = ({ hd, bd, ft, type, onClick, isLabel }) => {
   return (
     <div
-      className={classnames('weui-cell', { 'weui-cell_access': access })}
+      className={classnames('weui-cell', {
+        [`weui-cell_${type}`]: type,
+        'weui-check__label': isLabel
+      })}
       onClick={onClick}
     >
-      <div className="weui-cell__bd">
-        <p>{label}</p>
-      </div>
-      <div className="weui-cell_ft" />
+      {hd && <div className="weui-cell__hd">{renderProp(hd)}</div>}
+      {bd && <div className="weui-cell__bd">{renderProp(bd)}</div>}
+      {ft && <div className="weui-cell__ft">{renderProp(ft)}</div>}
     </div>
   )
 }
