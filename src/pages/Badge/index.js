@@ -38,6 +38,28 @@ const Badge = () => {
             </Fragment>
           )}
         />
+        <WeuiCell
+          type="access"
+          bd={() => (
+            <WeuiBadge
+              label="单行列表"
+              number="7"
+              style={{ marginLeft: ' 5px' }}
+            />
+          )}
+          ft
+        />
+        <WeuiCell
+          type="access"
+          bd={() => (
+            <WeuiBadge
+              label="单行列表"
+              number="New"
+              style={{ marginLeft: ' 5px' }}
+            />
+          )}
+          ft
+        />
       </WeuiCells>
     </Page>
   )
