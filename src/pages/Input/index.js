@@ -103,7 +103,7 @@ const Input = () => {
             <WeuiTextarea
               rows="3"
               limit="10"
-              textareaStr=""
+              dafalutValue=""
               placeholder="请输入文本"
             />
           )}
