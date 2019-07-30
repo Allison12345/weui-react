@@ -5,7 +5,12 @@ import Article from '../pages/Article'
 import Badge from '../pages/Badge'
 import Flex from '../pages/Flex'
 import Footer from '../pages/Footer'
+import List from '../pages/list'
 const routes = [
+  {
+    path: '/list',
+    component: List
+  },
   {
     path: '/footer',
     component: Footer

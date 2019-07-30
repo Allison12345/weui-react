@@ -1,7 +1,7 @@
 .page {
   overflow-y: auto;
   z-index: 1;
-  background-color: #f8f8f8;
+  background-color: #ededed;
   width: 100%;
   height: 100%;
 }

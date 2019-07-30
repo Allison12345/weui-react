@@ -18,6 +18,11 @@ const Flex = () => {
               ))}
           </WeuiFlex>
         ))}
+      <WeuiFlex>
+        <div className="placeholder">weui</div>
+        <WeuiFlexItem />
+        <div className="placeholder">weui</div>
+      </WeuiFlex>
     </Page>
   )
 }
