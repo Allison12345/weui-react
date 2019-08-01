@@ -6,7 +6,12 @@ import Badge from '../pages/Badge'
 import Flex from '../pages/Flex'
 import Footer from '../pages/Footer'
 import List from '../pages/list'
+import Grid from '../pages/Grid'
 const routes = [
+  {
+    path: '/grid',
+    component: Grid
+  },
   {
     path: '/list',
     component: List

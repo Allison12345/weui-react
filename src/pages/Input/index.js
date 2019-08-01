@@ -5,8 +5,13 @@ import WeuiCells from '../../components/WeuiCells'
 import WeuiCell from '../../components/WeuiCell'
 import WeuiTextarea from '../../components/WeuiTextarea'
 import WeuiSelect from '../../components/WeuiSelect'
+import { numberItems } from './config'
 
 const Input = () => {
+  const onChange = e => {
+    const value = e.target.value
+    console.log(value)
+  }
   return (
     <Page title="Input" desc="表单输入">
       <WeuiCells title="单选列表项" />
@@ -113,7 +118,7 @@ const Input = () => {
         <WeuiCell
           type="select"
           before
-          hd={() => <WeuiSelect />}
+          hd={() => <WeuiSelect items={numberItems} onChange={onChange} />}
           bd={() => (
             <input
               className="weui-input"

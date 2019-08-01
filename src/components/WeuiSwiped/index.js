@@ -11,34 +11,23 @@ class WeuiSwiped extends Component {
     }
   }
   touchstart = e => {
+    this.startIndex = this.state.index
     this.touchStart = e.touches[0].clientX
   }
   touchend = () => {
-    if (this.dist > 0) {
-      if (this.dist < 34) {
-        this.setState({ index: `${-68}px` })
-      } else if (34 <= this.dist && this.dist <= 68) {
-        this.setState({ index: 0 })
-      }
-    } else if (this.dist < 0) {
-      if (this.dist > -34) {
-        this.setState({ index: 0 })
-      } else if (-68 <= this.dist && this.dist <= -34) {
-        this.setState({ index: `${-68}px` })
-      }
+    if (this.state.index > -34) {
+      this.setState({ index: 0 })
+    } else if (-68 <= this.state.index && this.state.index <= -34) {
+      this.setState({ index: -68 })
     }
   }
   touchmove = e => {
-    this.dist = e.changedTouches[0].clientX - this.touchStart
-    if (this.dist < 0) {
-      this.setState({ index: `${this.dist}px` })
-      if (this.dist < -68) return
-    } else if (this.dist > 0) {
-      this.setState({ index: `${-68 + this.dist}px` })
-      if (this.dist > 68) return
+    const dist = e.changedTouches[0].clientX - this.touchStart
+    const currentIndex = this.startIndex + dist
+    if (-68 <= currentIndex && currentIndex <= 0) {
+      this.setState({ index: currentIndex })
     }
-
-    console.log(this.dist)
+    console.log(currentIndex)
   }
   render() {
     return (
@@ -52,7 +41,7 @@ class WeuiSwiped extends Component {
           >
             <div
               className="weui-cell__bd"
-              style={{ transform: `translateX(${this.state.index})` }}
+              style={{ transform: `translateX(${this.state.index}px)` }}
             >
               <WeuiCell bd="标题文字" ft="说明文字" />
             </div>

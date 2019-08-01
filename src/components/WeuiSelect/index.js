@@ -1,12 +1,11 @@
 import React from 'react'
 
-const WeuiSelect = () => {
+const WeuiSelect = ({ items, onChange }) => {
   return (
-    <select className="weui-select">
-      <option>+86</option>
-      <option>+80</option>
-      <option>+84</option>
-      <option>+87</option>
+    <select className="weui-select" onChange={onChange}>
+      {items.map((item, index) => (
+        <option key={index}>{item}</option>
+      ))}
     </select>
   )
 }
