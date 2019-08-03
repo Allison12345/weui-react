@@ -7,7 +7,12 @@ import Flex from '../pages/Flex'
 import Footer from '../pages/Footer'
 import List from '../pages/list'
 import Grid from '../pages/Grid'
+import Slider from '../pages/Slider'
 const routes = [
+  {
+    path: '/slider',
+    component: Slider
+  },
   {
     path: '/grid',
     component: Grid
