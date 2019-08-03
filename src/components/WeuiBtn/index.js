@@ -11,10 +11,12 @@ const WeuiBtn = ({
   isLoading,
   label,
   cellType,
-  plainDis
+  plainDis,
+  onClick
 }) => {
   return (
     <button
+      onClick={onClick}
       className={classnames(
         'weui-btn',
         `weui-btn_${type}`,

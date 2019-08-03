@@ -8,7 +8,12 @@ import Footer from '../pages/Footer'
 import List from '../pages/list'
 import Grid from '../pages/Grid'
 import Slider from '../pages/Slider'
+import ActionSheet from '../pages/ActionSheet'
 const routes = [
+  {
+    path: '/actionsheet',
+    component: ActionSheet
+  },
   {
     path: '/slider',
     component: Slider
