@@ -9,7 +9,17 @@ import List from '../pages/list'
 import Grid from '../pages/Grid'
 import Slider from '../pages/Slider'
 import ActionSheet from '../pages/ActionSheet'
+import Dialog from '../pages/Dialog'
+import HalfDialog from '../pages/HalfDialog'
 const routes = [
+  {
+    path: '/halfDialog',
+    component: HalfDialog
+  },
+  {
+    path: '/dialog',
+    component: Dialog
+  },
   {
     path: '/actionsheet',
     component: ActionSheet

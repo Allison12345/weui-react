@@ -98,6 +98,10 @@ class Home extends Component {
               path: 'dialog'
             },
             {
+              label: 'Half-screen Dialog',
+              path: 'halfDialog'
+            },
+            {
               label: 'Msg',
               path: 'msg'
             },
