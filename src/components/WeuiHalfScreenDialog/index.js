@@ -10,7 +10,7 @@ const WeuiHalfScreenDialog = ({
   onComfirm
 }) => {
   return (
-    <WeuiMask>
+    <WeuiMask onClick={onCancel}>
       <div className="weui-half-screen-dialog">
         <div className="weui-half-screen-dialog__hd">
           <div className="weui-half-screen-dialog__hd__side">

@@ -11,7 +11,12 @@ import Slider from '../pages/Slider'
 import ActionSheet from '../pages/ActionSheet'
 import Dialog from '../pages/Dialog'
 import HalfDialog from '../pages/HalfDialog'
+import Msg from '../pages/Msg'
 const routes = [
+  {
+    path: '/msg',
+    component: Msg
+  },
   {
     path: '/halfDialog',
     component: HalfDialog

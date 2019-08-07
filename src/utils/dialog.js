@@ -5,17 +5,23 @@ import WeuiDialog from '../components/WeuiDialog'
 import WeuiHalfScreenDialog from '../components/WeuiHalfScreenDialog'
 
 const dialogId = 'dialog'
+let dialogDom = null
 
-export const comfirm = ({ title, content, onCancel, onComfirm }) => {
-  let dialogDom = document.getElementById(dialogId)
+const initDlg = () => {
+  dialogDom = document.getElementById(dialogId)
   if (!dialogDom) {
     dialogDom = document.createElement('div')
     dialogDom.id = dialogId
     document.body.appendChild(dialogDom)
   }
-  const hide = () => {
-    ReactDOM.unmountComponentAtNode(dialogDom)
-  }
+}
+
+const hide = () => {
+  dialogDom && ReactDOM.unmountComponentAtNode(dialogDom)
+}
+
+export const comfirm = ({ title, content, onCancel, onComfirm }) => {
+  initDlg()
   const confirm = () => {
     onComfirm && onComfirm()
     hide()
@@ -34,16 +40,19 @@ export const comfirm = ({ title, content, onCancel, onComfirm }) => {
     dialogDom
   )
 }
+export const alert = ({ content, onComfirm }) => {
+  initDlg()
+  const comfirm = () => {
+    onComfirm && onComfirm()
+    hide()
+  }
+  ReactDOM.render(
+    <WeuiDialog content={content} onComfirm={comfirm} />,
+    dialogDom
+  )
+}
 export const halfComfirm = ({ title, content, tips, onCancel, onComfirm }) => {
-  let dialogDom = document.getElementById(dialogId)
-  if (!dialogDom) {
-    dialogDom = document.createElement('div')
-    dialogDom.id = dialogId
-    document.body.appendChild(dialogDom)
-  }
-  const hide = () => {
-    ReactDOM.unmountComponentAtNode(dialogDom)
-  }
+  initDlg()
   const confirm = () => {
     onComfirm && onComfirm()
     hide()

@@ -2,7 +2,7 @@ import React from 'react'
 
 import Page from '../../components/Page'
 import WeuiBtn from '../../components/WeuiBtn'
-import { comfirm } from '../../utils/dialog'
+import { comfirm, alert } from '../../utils/dialog'
 
 const onCancel = () => {
   console.log('cancel')
@@ -24,7 +24,18 @@ const Dialog = () => {
       <WeuiBtn
         label="iOS Dialog样式二"
         btnDefault
-        onClick={() => comfirm({ content: '内容', onComfirm })}
+        onClick={() =>
+          alert({
+            content: () => (
+              <img
+                style={{ width: '120px', height: 'auto' }}
+                src={require('../../assets/imgs/IMG_7.png')}
+                alt="img"
+              />
+            ),
+            onComfirm
+          })
+        }
       />
     </Page>
   )
