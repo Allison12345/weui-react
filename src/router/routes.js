@@ -13,7 +13,12 @@ import Dialog from '../pages/Dialog'
 import HalfDialog from '../pages/HalfDialog'
 import Msg from '../pages/Msg'
 import Icons from '../pages/Icons'
+import Loadmore from '../pages/Loadmore'
 const routes = [
+  {
+    path: '/loadmore',
+    component: Loadmore
+  },
   {
     path: '/icons',
     component: Icons
