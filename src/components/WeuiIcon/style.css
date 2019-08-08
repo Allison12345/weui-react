@@ -1,0 +1,20 @@
+.icon-box {
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+}
+.icon-box i {
+  margin-right: 18px;
+}
+.icon-box__ctn {
+  -webkit-flex-shrink: 100;
+  flex-shrink: 100;
+}
+.icon-box__title {
+  font-weight: 400;
+}
+.icon-box__desc {
+  margin-top: 6px;
+  font-size: 12px;
+  color: #888;
+}
