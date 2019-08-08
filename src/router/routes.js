@@ -15,7 +15,12 @@ import Msg from '../pages/Msg'
 import Icons from '../pages/Icons'
 import Loadmore from '../pages/Loadmore'
 import Panel from '../pages/Panel'
+import Preview from '../pages/Preview'
 const routes = [
+  {
+    path: '/preview',
+    component: Preview
+  },
   {
     path: '/panel',
     component: Panel
