@@ -16,7 +16,12 @@ import Icons from '../pages/Icons'
 import Loadmore from '../pages/Loadmore'
 import Panel from '../pages/Panel'
 import Preview from '../pages/Preview'
+import Progress from '../pages/Progress'
 const routes = [
+  {
+    path: '/progress',
+    component: Progress
+  },
   {
     path: '/preview',
     component: Preview
