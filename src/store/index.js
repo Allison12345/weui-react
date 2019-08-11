@@ -15,15 +15,21 @@ if (message) {
 
 class Store {
   msg = message
+  activeIndex = -1
   setMsg(msg) {
     this.msg = msg
     window.sessionStorage.setItem(sessionKey, JSON.stringify(msg))
+  }
+  setActiveIndex(activeIndex) {
+    this.activeIndex = activeIndex
   }
 }
 
 new decorate(Store, {
   msg: observable,
-  setMsg: action
+  setMsg: action,
+  activeIndex: observable,
+  setActiveIndex: action
 })
 
 export default new Store()

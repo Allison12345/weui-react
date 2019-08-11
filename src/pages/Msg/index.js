@@ -1,11 +1,12 @@
 import React from 'react'
 import store from '../../store'
+import { observer } from 'mobx-react'
 
 import Page from '../../components/Page'
 import WeuiBtn from '../../components/WeuiBtn'
 
 //history 通过props接受
-const Msg = ({ history }) => {
+const MsgComponent = observer(({ history, store }) => {
   const routerClick = () => {
     history.push('msgpage')
   }
@@ -53,5 +54,7 @@ const Msg = ({ history }) => {
       <WeuiBtn btnDefault label="无图标提示页" onClick={onclick4} />
     </Page>
   )
-}
+})
+const Msg = props => <MsgComponent {...props} store={store} />
+
 export default Msg
