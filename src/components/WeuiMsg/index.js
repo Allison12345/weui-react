@@ -4,7 +4,10 @@ import WeuiBtn from '../../components/WeuiBtn'
 
 import classnames from 'classnames'
 
-const WeuiMsg = ({ type, title, content, tips }) => {
+const WeuiMsg = ({ type, title, content, tips, history }) => {
+  const onclick = () => {
+    history.goBack()
+  }
   return (
     <div className="weui-msg">
       <div className="weui-msg__icon-area">
@@ -15,7 +18,7 @@ const WeuiMsg = ({ type, title, content, tips }) => {
         <p className="weui-msg__desc">{content}</p>
       </div>
       <div className="weui-msg__opr-area">
-        <WeuiBtn type="primary" label="推荐操作" />
+        <WeuiBtn type="primary" label="推荐操作" onClick={onclick} />
       </div>
       <div className="weui-msg__tips-area">
         <p className="weui-msg__tips">{tips}</p>

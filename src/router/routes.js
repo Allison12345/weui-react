@@ -17,7 +17,12 @@ import Loadmore from '../pages/Loadmore'
 import Panel from '../pages/Panel'
 import Preview from '../pages/Preview'
 import Progress from '../pages/Progress'
+import MsgPage from '../pages/MsgPage'
 const routes = [
+  {
+    path: '/msgpage',
+    component: MsgPage
+  },
   {
     path: '/progress',
     component: Progress
