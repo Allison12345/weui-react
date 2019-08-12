@@ -19,7 +19,12 @@ import Preview from '../pages/Preview'
 import Progress from '../pages/Progress'
 import MsgPage from '../pages/MsgPage'
 import UpLoader from '../pages/upLoader'
+import Toast from '../pages/Toast'
 const routes = [
+  {
+    path: '/toast',
+    component: Toast
+  },
   {
     path: '/uploader',
     component: UpLoader
