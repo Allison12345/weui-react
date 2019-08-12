@@ -1,5 +1,7 @@
 import React from 'react'
 
+import './style.css'
+
 import WeuiCell from '../WeuiCell'
 import WeuiCells from '../WeuiCells'
 
@@ -9,11 +11,12 @@ const Pane = ({ label, icon, items = [], history, isShow, onClick }) => {
   }
   return (
     <li>
-      <div className="weui-flex" onClick={onClick}>
+      <div className="weui-flex" style={{ padding: '20px' }} onClick={onClick}>
         <p className="weui-flex__item">{label}</p>
         <img
           src={require(`../../assets/imgs/icon_nav_${icon}.png`)}
           alt="logo"
+          style={{ width: '30px', height: '30px' }}
         />
       </div>
       {isShow && (

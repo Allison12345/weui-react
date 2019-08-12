@@ -1,0 +1,10 @@
+li:first-child {
+  margin-top: 0;
+}
+li {
+  margin: 8px 0;
+  background-color: #fff;
+  overflow: hidden;
+  border-radius: 2px;
+  cursor: pointer;
+}

@@ -18,7 +18,12 @@ import Panel from '../pages/Panel'
 import Preview from '../pages/Preview'
 import Progress from '../pages/Progress'
 import MsgPage from '../pages/MsgPage'
+import UpLoader from '../pages/upLoader'
 const routes = [
+  {
+    path: '/uploader',
+    component: UpLoader
+  },
   {
     path: '/msgpage',
     component: MsgPage
