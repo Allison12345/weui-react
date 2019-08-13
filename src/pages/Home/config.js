@@ -115,7 +115,7 @@ export const items = [
       },
       {
         label: 'Tabbar',
-        path: 'myTabbar'
+        path: 'tabbar'
       }
     ]
   },

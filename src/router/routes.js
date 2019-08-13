@@ -21,10 +21,17 @@ import MsgPage from '../pages/MsgPage'
 import UpLoader from '../pages/upLoader'
 import Toast from '../pages/Toast'
 import Navbar from '../pages/Navbar'
+import Tabbar from '../pages/Tabbar'
 const routes = [
   {
+    path: '/tabbar',
+    component: Tabbar,
+    exact: false
+  },
+  {
     path: '/navbar',
-    component: Navbar
+    component: Navbar,
+    exact: false
   },
   {
     path: '/toast',

@@ -5,7 +5,7 @@ import classnames from 'classnames'
 
 import { renderProp } from '../../utils/render'
 
-const Page = ({ ft, title, desc, spacing, children }) => {
+const Page = ({ ft, title, desc, spacing, children, bdStyle }) => {
   return (
     <div className="page">
       {title && (
@@ -14,10 +14,13 @@ const Page = ({ ft, title, desc, spacing, children }) => {
           <p className="page__desc">{desc}</p>
         </div>
       )}
-      <div className={classnames('page__bd', { page__bd_spacing: spacing })}>
+      <div
+        className={classnames('page__bd', { page__bd_spacing: spacing })}
+        style={bdStyle}
+      >
         {children}
       </div>
-      {ft && <div className="page__ft">{ft}</div>}
+      {ft && <div className="page__ft">{renderProp(ft)}</div>}
     </div>
   )
 }
