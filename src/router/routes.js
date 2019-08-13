@@ -20,7 +20,12 @@ import Progress from '../pages/Progress'
 import MsgPage from '../pages/MsgPage'
 import UpLoader from '../pages/upLoader'
 import Toast from '../pages/Toast'
+import Navbar from '../pages/Navbar'
 const routes = [
+  {
+    path: '/navbar',
+    component: Navbar
+  },
   {
     path: '/toast',
     component: Toast

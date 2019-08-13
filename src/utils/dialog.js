@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom'
 
 import WeuiDialog from '../components/WeuiDialog'
 import WeuiHalfScreenDialog from '../components/WeuiHalfScreenDialog'
+import WeuiTab from '../components/WeuiTab'
 
 const dialogId = 'dialog'
 let dialogDom = null
@@ -71,4 +72,8 @@ export const halfComfirm = ({ title, content, tips, onCancel, onComfirm }) => {
     />,
     dialogDom
   )
+}
+export const navbar = ({ index }) => {
+  initDlg()
+  ReactDOM.render(<WeuiTab index={index} />, dialogDom)
 }
