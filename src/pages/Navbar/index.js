@@ -10,6 +10,7 @@ const items = ['选项一', '选项二', '选项三']
 
 const NavbarChildPage = ({ match, setIndex }) => {
   setIndex(parseInt(match.params.id, 10))
+  console.log(match)
   return <WeuiTabPanel>{match.params.id}</WeuiTabPanel>
 }
 

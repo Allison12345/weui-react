@@ -1,15 +1,16 @@
 import React from 'react'
 
 import classnames from 'classnames'
-const WeuiTabbar = ({ items }) => {
+const WeuiTabbar = ({ items, onclick, index }) => {
   return (
     <div className="weui-tabbar">
       {items.map((item, key) => (
         <div
           key={key}
           className={classnames('weui-tabbar__item', {
-            'weui-bar__item_on': key === item.key
+            'weui-bar__item_on': key === index
           })}
+          onClick={() => onclick(key)}
         >
           <span style={{ display: 'inline-block', position: 'relative' }}>
             <img
