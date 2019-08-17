@@ -18,10 +18,14 @@ const WeuiTabbar = ({ items, onclick, index }) => {
               src={require('../../assets/imgs/icon_tabbar.png')}
               alt="img"
             />
-            <span
-              className="weui-badge"
-              style={{ position: 'absolute', top: '-2px', right: ' -13px' }}
-            />
+            {item.number && (
+              <span
+                className="weui-badge"
+                style={{ position: 'absolute', top: '-2px', right: ' -13px' }}
+              >
+                {item.number}
+              </span>
+            )}
           </span>
           <p className="weui-tabbar__label">{item.label}</p>
         </div>

@@ -40,7 +40,11 @@ export const comfirm = ({ title, content, onCancel, onComfirm }) => {
     dialogDom
   )
 }
-export const alert = ({ content, onComfirm }) => {
+export const alert = options => {
+  if (typeof options === 'string') {
+    options = { content: options }
+  }
+  const { content, onComfirm } = options
   initDlg()
   const comfirm = () => {
     onComfirm && onComfirm()

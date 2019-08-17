@@ -22,7 +22,12 @@ import UpLoader from '../pages/upLoader'
 import Toast from '../pages/Toast'
 import Navbar from '../pages/Navbar'
 import Tabbar from '../pages/Tabbar'
+import Gallery from '../pages/Gallery'
 const routes = [
+  {
+    path: '/gallery',
+    component: Gallery
+  },
   {
     path: '/tabbar',
     component: Tabbar,

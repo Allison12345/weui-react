@@ -10,7 +10,7 @@ const Pane = ({ label, icon, items = [], history, isShow, onClick }) => {
     history.push(path)
   }
   return (
-    <li>
+    <li className="pane">
       <div className="weui-flex" style={{ padding: '20px' }} onClick={onClick}>
         <p className="weui-flex__item">{label}</p>
         <img
